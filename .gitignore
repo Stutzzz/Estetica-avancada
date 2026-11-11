@@ -1,0 +1,17 @@
+# Sistema
+.DS_Store
+Thumbs.db
+
+# Editores
+.vscode/
+.idea/
+
+# Vercel
+.vercel
+
+# Logs e dependências (caso algum dia use npm)
+node_modules/
+*.log
+
+# Claude Code
+.claude/

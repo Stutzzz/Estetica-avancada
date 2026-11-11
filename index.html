@@ -1,0 +1,669 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Thais Tutuy | Estética Avançada em Alphaville — Método Efeito ViraTempo</title>
+  <meta name="description" content="Diminua rugas e linhas de expressão em 12 semanas, sem agulha e sem botox. Tratamentos faciais personalizados com Thais Tutuy em Alphaville, Barueri.">
+  <meta name="theme-color" content="#AA0331">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:title" content="Thais Tutuy | Sua pele mais jovem sem agulha">
+  <meta property="og:description" content="Método Efeito ViraTempo: tratamentos faciais personalizados em Alphaville, sem botox.">
+  <meta property="og:image" content="/assets/img/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+
+  <!-- Fontes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT,WONK@9..144,300..400,0..100,0..1&family=Inter:wght@400&family=Marcellus+SC&family=Poppins:wght@300;400;500;600&display=swap">
+
+  <link rel="preload" as="image" href="assets/img/hero-woman.webp" fetchpriority="high">
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <!-- Marca o documento como "com JS" antes do primeiro paint (evita flash nas animações) -->
+  <script>document.documentElement.classList.add('js')</script>
+
+  <!-- GSAP (ScrollTrigger, ScrollSmoother, SplitText) -->
+  <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollSmoother.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/SplitText.min.js"></script>
+  <script defer src="assets/js/main.js"></script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BeautySalon",
+    "name": "Estética Thais Tutuy",
+    "description": "Estética facial avançada e Método Efeito ViraTempo em Alphaville.",
+    "telephone": "+55 11 98299-5652",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Al. Rio Negro, 1084",
+      "addressLocality": "Barueri",
+      "addressRegion": "SP",
+      "addressCountry": "BR"
+    },
+    "areaServed": "Alphaville",
+    "sameAs": ["https://www.instagram.com/esteticathaistutuy/"]
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+  <!-- Ícones reutilizáveis -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <symbol id="i-arrow" viewBox="0 0 14 14">
+      <path d="M1 1h12v12M13 1 1 13" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+  </svg>
+
+  <!-- ============ HEADER (fora do smooth-wrapper para ficar fixo) ============ -->
+  <header class="site-header" data-header>
+    <a class="site-header__logo" href="#inicio" aria-label="Thais Tutuy — Efeito ViraTempo, voltar ao início">
+      <img src="assets/icons/logo.svg" alt="" width="180" height="121">
+    </a>
+
+    <nav class="site-nav" aria-label="Principal">
+      <ul class="site-nav__list">
+        <li><a href="#inicio">Início</a></li>
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#tratamentos">Tratamentos</a></li>
+        <li><a href="#vira-tempo">Vira tempo</a></li>
+      </ul>
+    </nav>
+
+    <a class="btn btn--glass site-header__cta" href="https://wa.me/5511982995652?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o." target="_blank" rel="noopener">
+      Entrar em contato
+      <svg class="icon-arrow" aria-hidden="true"><use href="#i-arrow"/></svg>
+    </a>
+
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" data-menu-toggle>
+      <span class="menu-toggle__bars" aria-hidden="true"></span>
+      <span class="sr-only">Abrir menu</span>
+    </button>
+  </header>
+
+  <div class="mobile-menu" id="mobile-menu" role="dialog" aria-modal="true" aria-label="Menu" hidden data-menu>
+    <nav aria-label="Menu móvel">
+      <ul class="mobile-menu__list">
+        <li><a href="#inicio">Início</a></li>
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#tratamentos">Tratamentos</a></li>
+        <li><a href="#vira-tempo">Vira tempo</a></li>
+        <li><a href="#duvidas">Dúvidas</a></li>
+      </ul>
+    </nav>
+    <a class="btn btn--outline-light" href="https://wa.me/5511982995652?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o." target="_blank" rel="noopener">Agendar uma avaliação</a>
+  </div>
+
+  <div id="smooth-wrapper">
+    <div id="smooth-content">
+      <main id="conteudo" tabindex="-1">
+
+        <!-- ============ 1. HERO ============ -->
+        <section class="hero" id="inicio" aria-labelledby="hero-title">
+          <div class="hero__card" data-hero-card>
+            <div class="hero__photo-wrap">
+              <img class="hero__photo" src="assets/img/hero-woman.webp" alt="Mulher com a pele iluminada usando um rolinho facial" width="1400" height="2000" fetchpriority="high" data-hero-photo>
+            </div>
+
+            <div class="hero__content" data-hero-intro>
+              <p class="eyebrow eyebrow--light eyebrow--sm">
+                <img src="assets/icons/star-hero.svg" alt="" width="28" height="28">
+                Estética avançada em Alphaville
+              </p>
+              <h1 class="hero__title" id="hero-title">Sua pele mais jovem sem agulha!</h1>
+              <p class="hero__lead">Diminua rugas e linhas de expressão em 12 semanas com um método personalizado desenvolvido exclusivamente para mulheres em Alphaville.</p>
+              <div class="hero__actions">
+                <a class="btn btn--outline-light" href="https://wa.me/5511982995652?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o." target="_blank" rel="noopener">Agendar uma avaliação</a>
+                <a class="btn btn--ghost-light" href="#tratamentos">
+                  Serviços
+                  <svg class="icon-arrow" aria-hidden="true"><use href="#i-arrow"/></svg>
+                </a>
+              </div>
+            </div>
+
+            <address class="hero__address" data-hero-intro>
+              <img src="assets/icons/map-pin.svg" alt="" width="54" height="54">
+              <span>Al. Rio Negro, 1084 - Alphaville Industrial, Barueri</span>
+            </address>
+
+            <p class="hero__signature" aria-hidden="true" data-hero-signature>Thais Tutuy</p>
+          </div>
+        </section>
+
+        <!-- ============ 2. MOMENTOS ============ -->
+        <section class="section moments" id="momentos" aria-labelledby="momentos-title">
+          <div class="container">
+            <div class="section-head section-head--split">
+              <h2 class="title title--lg" id="momentos-title" data-split>Talvez esteja vivendo um destes momentos</h2>
+              <p class="lead" data-reveal>O espelho muitas vezes reflete o estresse do dia a dia e a ação do tempo, trazendo sinais que não condizem com como nos sentimos por dentro. O cuidado certo é o espaço para resgatar a sua melhor versão.</p>
+            </div>
+
+            <ul class="moments__grid" role="list">
+              <li class="moment-card" data-reveal>
+                <div class="moment-card__media">
+                  <span class="moment-card__bg" aria-hidden="true"></span>
+                  <img class="moment-card__img moment-card__img--mature" src="assets/img/moment-mature.webp" alt="Mulher madura tocando o rosto" width="720" height="1009" loading="lazy">
+                </div>
+                <div class="moment-card__body">
+                  <h3 class="card-title">Sinais do tempo</h3>
+                  <p>Linhas de expressão marcadas, flacidez e a sensação de que o rosto está perdendo a sustentação e a firmeza natural da juventude.</p>
+                </div>
+              </li>
+              <li class="moment-card" data-reveal>
+                <div class="moment-card__media">
+                  <span class="moment-card__bg" aria-hidden="true"></span>
+                  <img class="moment-card__img moment-card__img--acne" src="assets/img/moment-acne.webp" alt="Jovem observando a acne no espelho" width="720" height="1080" loading="lazy">
+                </div>
+                <div class="moment-card__body">
+                  <h3 class="card-title">Acne e Oleosidade</h3>
+                  <p>Espinhas persistentes, cravos e inflamações que não apenas machucam a pele, mas afetam diretamente a sua autoestima e segurança.</p>
+                </div>
+              </li>
+              <li class="moment-card" data-reveal>
+                <div class="moment-card__media">
+                  <span class="moment-card__bg" aria-hidden="true"></span>
+                  <img class="moment-card__img moment-card__img--texture" src="assets/img/moment-texture.webp" alt="Mulher com as mãos no rosto" width="800" height="781" loading="lazy">
+                </div>
+                <div class="moment-card__body">
+                  <h3 class="card-title">Textura e Poros Dilatados</h3>
+                  <p>Sensação de pele áspera, poros muito aparentes e dificuldade para manter um aspecto liso e uniforme no dia a dia.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- ============ 3. MÉTODO ============ -->
+        <section class="section method" id="metodo" aria-labelledby="metodo-title">
+          <div class="container">
+            <div class="method__panel" data-reveal>
+              <div class="section-head section-head--split method__head">
+                <div>
+                  <p class="eyebrow">
+                    <img src="assets/icons/star.svg" alt="" width="42" height="42">
+                    Método vira tempo
+                  </p>
+                  <h2 class="title title--md" id="metodo-title" data-split>Buscando uma pele firme, viçosa e luminosa – sem botox</h2>
+                </div>
+                <p class="lead lead--sm">Depois de anos atuando na área da estética, eu cansei de protocolos prontos que prometem o mundo, mas não servem para todas as peles. Sabe por quê? Porque cada pele é única. E nada mais justo do que ter um tratamento desenhado especificamente para você.</p>
+              </div>
+
+              <div class="method__grid">
+                <article class="method-card method-card--feature" data-reveal>
+                  <img class="method-card__photo" src="assets/img/method-hands.webp" alt="Mãos espalhando creme hidratante" width="600" height="900" loading="lazy">
+                  <div class="method-card__text">
+                    <h3 class="card-title">Chega de protocolos engessados. A sua pele conta a sua história.</h3>
+                    <p>Depois de anos atuando na estética, cansei de tratamentos prontos que não servem para todas as pessoas. Cada pele é única. O Método Efeito ViraTempo nasceu para oferecer um gerenciamento 100% personalizado. Aqui você não entra em um protocolo padronizado; você garante um método exclusivo pensado para tratar a sua pele como um todo.</p>
+                  </div>
+                </article>
+
+                <article class="method-card method-card--bottle" data-reveal>
+                  <h3 class="card-title">Sem botox!</h3>
+                  <p>É possível tratar o envelhecimento de forma natural.</p>
+                  <img class="method-card__bottle" src="assets/img/method-bottle.webp" alt="Frasco de sérum ViraTempo" width="400" height="827" loading="lazy">
+                </article>
+
+                <ul class="method__benefits" role="list">
+                  <li class="benefit" data-reveal>
+                    <img src="assets/icons/icon-sparkles.svg" alt="" width="64" height="64">
+                    <span>100% Personalizado</span>
+                  </li>
+                  <li class="benefit" data-reveal>
+                    <img src="assets/icons/icon-hourglass.svg" alt="" width="64" height="64">
+                    <span>Melhora de Textura e Viço</span>
+                  </li>
+                  <li class="benefit" data-reveal>
+                    <img src="assets/icons/icon-pipette.svg" alt="" width="64" height="64">
+                    <span>Controle de Acne e Manchas</span>
+                  </li>
+                  <li class="benefit" data-reveal>
+                    <img src="assets/icons/icon-droplets.svg" alt="" width="64" height="64">
+                    <span>Suavização de Rugas</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ============ 4. TRATAMENTOS ============ -->
+        <section class="section treatments" id="tratamentos" aria-labelledby="tratamentos-title">
+          <div class="container treatments__layout" data-treatments>
+            <div class="treatments__aside">
+            <div class="treatments__intro" data-treatments-intro>
+              <p class="eyebrow">
+                <img src="assets/icons/star.svg" alt="" width="42" height="42">
+                Nossos tratamentos
+              </p>
+              <h2 class="title" id="tratamentos-title" data-split>Como podemos transformar a sua pele hoje?</h2>
+              <p class="lead" data-reveal>Cada tratamento é planejado de forma individualizada, a partir de uma análise facial criteriosa e das necessidades de cada paciente. A proposta é promover equilíbrio, naturalidade e resultados elegantes, respeitando a individualidade e a harmonia facial.</p>
+              <a class="btn btn--primary" href="https://wa.me/5511982995652?text=Ol%C3%A1!%20Quero%20saber%20mais%20sobre%20os%20tratamentos." target="_blank" rel="noopener" data-reveal>
+                Entrar em contato
+                <svg class="icon-arrow" aria-hidden="true"><use href="#i-arrow"/></svg>
+              </a>
+            </div>
+            </div>
+
+            <ol class="treatments__list" role="list" data-treatments-list>
+              <li class="treat-card treat-card--light" data-treat-card>
+                <img class="treat-card__glow" src="assets/icons/treat-glow-light.svg" alt="" width="1094" height="452" aria-hidden="true">
+                <div class="treat-card__figure treat-card__figure--limpeza" data-treat-figure>
+                  <img src="assets/img/treat-limpeza.webp" alt="Mulher com máscara facial e toalha na cabeça" width="600" height="862" loading="lazy">
+                </div>
+                <div class="treat-card__body">
+                  <h3 class="card-title card-title--lg">Limpeza de Pele Personalizada</h3>
+                  <p>Procedimento personalizado para o seu biotipo cutâneo. Mantém a pele limpa, livre de cravos e melhora a textura e o viço. Finalizamos com alta frequência e Led/Laser para acelerar a recuperação.</p>
+                </div>
+              </li>
+              <li class="treat-card treat-card--dark" data-treat-card>
+                <img class="treat-card__glow" src="assets/icons/treat-glow-dark.svg" alt="" width="1094" height="452" aria-hidden="true">
+                <div class="treat-card__figure treat-card__figure--peeling" data-treat-figure>
+                  <img src="assets/img/treat-peeling.webp" alt="Mulher removendo máscara de peeling do rosto" width="1200" height="596" loading="lazy">
+                </div>
+                <div class="treat-card__body">
+                  <h3 class="card-title card-title--lg">Peeling</h3>
+                  <p>Acelera o processo de renovação celular. Melhora a textura, previne o envelhecimento, minimiza manchas, reduz poros dilatados e auxilia fortemente no controle da acne.</p>
+                </div>
+              </li>
+              <li class="treat-card treat-card--mid" data-treat-card>
+                <img class="treat-card__glow" src="assets/icons/treat-glow-mid.svg" alt="" width="1094" height="452" aria-hidden="true">
+                <div class="treat-card__figure treat-card__figure--micro" data-treat-figure>
+                  <img src="assets/img/treat-microagulhamento.webp" alt="Paciente recebendo microagulhamento facial" width="560" height="672" loading="lazy">
+                </div>
+                <div class="treat-card__body">
+                  <h3 class="card-title card-title--lg">Microagulhamento</h3>
+                  <p>O verdadeiro estímulo de colágeno para uma pele mais firme. Atenua linhas de expressão e rugas, afina a aparência dos poros, devolve o viço e ilumina o rosto.</p>
+                </div>
+              </li>
+              <li class="treat-card treat-card--light" data-treat-card>
+                <img class="treat-card__glow" src="assets/icons/treat-glow-light.svg" alt="" width="1094" height="452" aria-hidden="true">
+                <div class="treat-card__figure treat-card__figure--lifting" data-treat-figure>
+                  <img src="assets/img/treat-lifting.webp" alt="Rosto feminino com marcações de lifting" width="520" height="780" loading="lazy">
+                </div>
+                <div class="treat-card__body">
+                  <h3 class="card-title card-title--lg">Lifting Facial</h3>
+                  <p>Promove um lifting instantâneo com efeito cumulativo. Diminui linhas finas, entrega uma aparência de pele descansada e gera um estímulo leve de colágeno para maior firmeza.</p>
+                </div>
+              </li>
+              <li class="treat-card treat-card--dark" data-treat-card>
+                <img class="treat-card__glow" src="assets/icons/treat-glow-dark.svg" alt="" width="1094" height="452" aria-hidden="true">
+                <div class="treat-card__figure treat-card__figure--spa" data-treat-figure>
+                  <img src="assets/img/treat-spa.webp" alt="Mulher relaxando com máscara facial em spa" width="1000" height="667" loading="lazy">
+                </div>
+                <div class="treat-card__body">
+                  <h3 class="card-title card-title--lg">Spa Facial</h3>
+                  <p>A revitalização que seu rosto pede. Devolve viço, maciez e hidratação profunda de forma totalmente personalizada.</p>
+                </div>
+              </li>
+              <li class="treat-card treat-card--mid" data-treat-card>
+                <img class="treat-card__glow" src="assets/icons/treat-glow-mid.svg" alt="" width="1094" height="452" aria-hidden="true">
+                <div class="treat-card__figure treat-card__figure--labios" data-treat-figure>
+                  <img src="assets/img/treat-labios.webp" alt="Close de lábios hidratados" width="920" height="655" loading="lazy">
+                </div>
+                <div class="treat-card__body">
+                  <h3 class="card-title card-title--lg">Lábios de Seda</h3>
+                  <p>Microagulhamento labial totalmente indolor. Remove células mortas, hidrata de dentro para fora e realça o contorno dos lábios. Promove um aumento leve do volume e suaviza as linhas de expressão (código de barras).</p>
+                </div>
+              </li>
+            </ol>
+          </div>
+        </section>
+
+        <!-- ============ 5. SOBRE ============ -->
+        <section class="section about" id="sobre" aria-labelledby="sobre-title">
+          <div class="container about__layout">
+            <div class="about__text">
+              <p class="eyebrow">
+                <img src="assets/icons/star.svg" alt="" width="42" height="42">
+                Sobre nós
+              </p>
+              <h2 class="title" id="sobre-title" data-split>Quem está por trás do seu cuidado</h2>
+              <div class="prose" data-reveal>
+                <p>Muito prazer, eu sou Thais Tutuy. <strong>Sou especialista em estética facial e a criadora do Método Efeito ViraTempo</strong>. Minha missão sempre foi ir além da superfície da pele e dos protocolos engessados. Eu acredito que a estética deve ser um ato de cuidado profundo, onde cada pele é ouvida, interpretada e respeitada.</p>
+                <p>Ao longo da minha trajetória, vi muitas pacientes frustradas com tratamentos genéricos que não entregavam o prometido. Foi isso que me motivou a desenvolver uma abordagem totalmente focada na individualidade e no gerenciamento inteligente da pele. <strong>O meu objetivo é entregar resultados reais, elegantes e duradouros</strong>, sem perder a naturalidade das suas expressões.</p>
+                <p>Aqui, o meu compromisso é devolver a sua autoestima e <strong>mostrar que a sua melhor versão já existe,</strong> só precisa do direcionamento e do cuidado certo para revelar toda a sua luminosidade.</p>
+              </div>
+              <a class="btn btn--primary" href="https://wa.me/5511982995652?text=Ol%C3%A1%20Thais!%20Gostaria%20de%20conversar%20sobre%20minha%20pele." target="_blank" rel="noopener" data-reveal>
+                Entrar em contato
+                <svg class="icon-arrow" aria-hidden="true"><use href="#i-arrow"/></svg>
+              </a>
+            </div>
+            <figure class="about__photo" data-clip>
+              <img src="assets/img/about-portrait.webp" alt="Thais Tutuy, especialista em estética facial, sentada de blazer branco" width="1410" height="1601" loading="lazy" data-parallax-img>
+            </figure>
+          </div>
+        </section>
+
+        <!-- ============ 6. GALERIA ============ -->
+        <section class="gallery" aria-label="Bastidores da clínica">
+          <div class="gallery__track" data-gallery>
+            <figure class="gallery__item"><img src="assets/img/gallery-1.webp" alt="Thais Tutuy sentada na maca da clínica" width="683" height="1024" loading="lazy"></figure>
+            <figure class="gallery__item"><img src="assets/img/gallery-2.webp" alt="Massagem facial em paciente" width="960" height="640" loading="lazy"></figure>
+            <figure class="gallery__item"><img src="assets/img/gallery-3.webp" alt="Mãos aplicando creme" width="683" height="1024" loading="lazy"></figure>
+            <figure class="gallery__item"><img src="assets/img/gallery-4.webp" alt="Análise de fotos de antes e depois no tablet" width="683" height="1024" loading="lazy"></figure>
+            <figure class="gallery__item"><img src="assets/img/gallery-5.webp" alt="Conta-gotas com sérum" width="683" height="1024" loading="lazy"></figure>
+            <figure class="gallery__item"><img src="assets/img/gallery-6.webp" alt="Paciente recebendo tratamento com LED" width="960" height="640" loading="lazy"></figure>
+          </div>
+        </section>
+
+        <!-- ============ 7. E-BOOK ============ -->
+        <section class="section ebook" id="vira-tempo" aria-labelledby="ebook-title">
+          <div class="container ebook__layout">
+            <div class="ebook__text">
+              <p class="eyebrow">
+                <img src="assets/icons/star.svg" alt="" width="42" height="42">
+                Nosso e-book
+              </p>
+              <h2 class="title ebook__title" id="ebook-title" data-split>O primeiro passo para a sua melhor versão</h2>
+              <p class="lead" data-reveal>Sua pele sempre dá sinais do que precisa. O nosso trabalho é interpretar cada um deles. Antes de qualquer procedimento, realizamos um Diagnóstico de Pele aprofundado para entender exatamente o que está causando suas queixas.</p>
+
+              <div class="bonus" data-reveal>
+                <img src="assets/icons/icon-book.svg" alt="" width="70" height="70">
+                <div>
+                  <h3 class="card-title">Bônus Exclusivo:</h3>
+                  <p>Ao realizar o seu diagnóstico conosco, você ganha acesso ao nosso E-book Exclusivo, um guia prático para você manter os cuidados em casa e prolongar os resultados do consultório, entendendo de vez como cuidar do seu tipo de pele no dia a dia.</p>
+                </div>
+              </div>
+
+              <a class="btn btn--primary btn--lg" href="https://wa.me/5511982995652?text=Ol%C3%A1!%20Quero%20agendar%20meu%20Diagn%C3%B3stico%20de%20Pele%20e%20garantir%20o%20E-book." target="_blank" rel="noopener" data-reveal>
+                Agendar meu Diagnóstico e garantir o E-book
+                <svg class="icon-arrow" aria-hidden="true"><use href="#i-arrow"/></svg>
+              </a>
+            </div>
+
+            <div class="ebook__visual" data-ebook>
+              <img class="ebook__mockup" src="assets/img/ebook-mockup.webp" alt="E-book Efeito ViraTempo em versão impressa e no celular" width="1050" height="904" loading="lazy" data-ebook-mockup>
+              <img class="ebook__shadow" src="assets/icons/ebook-shadow.svg" alt="" width="754" height="159" aria-hidden="true">
+            </div>
+          </div>
+        </section>
+
+        <!-- ============ 8. A ARTE DE RENOVAR ============ -->
+        <section class="section art" id="arte" aria-labelledby="arte-title">
+          <div class="container container--narrow">
+            <div class="art__headline">
+              <h2 class="art__title" id="arte-title" data-art-title>
+                <span>A arte</span>
+                <span>de renovar</span>
+                <span>a sua pele!</span>
+              </h2>
+              <img class="art__bubble art__bubble--1" src="assets/img/art-circle-1.webp" alt="" width="380" height="380" loading="lazy" data-bubble="1">
+              <img class="art__bubble art__bubble--2" src="assets/img/art-circle-2.webp" alt="" width="380" height="380" loading="lazy" data-bubble="2">
+            </div>
+
+            <div class="bento">
+              <article class="bento__card bento__card--atemporal" data-reveal>
+                <img class="bento__bg" src="assets/img/art-atemporal.webp" alt="" width="1100" height="1650" loading="lazy">
+                <div class="bento__text bento__text--light">
+                  <h3 class="bento__title">Beleza Atemporal</h3>
+                  <p>O Efeito ViraTempo vai muito além de procedimentos. É sobre interpretar os sinais da sua pele e gerenciar o colágeno para revelar a sua versão mais radiante, mantendo a naturalidade que te faz única.</p>
+                </div>
+              </article>
+              <article class="bento__card bento__card--estetica" data-reveal>
+                <img class="bento__bg" src="assets/img/art-estetica.webp" alt="" width="1774" height="886" loading="lazy">
+                <div class="bento__text">
+                  <h3 class="bento__title">Estética Thais Tutuy</h3>
+                  <p>Inspirados pela singularidade de cada paciente, criamos tratamentos para refletir a força e a beleza natural que já existem em você. Esqueça os protocolos engessados; aqui sua pele é tratada com exclusividade e sofisticação.</p>
+                </div>
+              </article>
+              <article class="bento__card bento__card--inovacao" data-reveal>
+                <img class="bento__bg" src="assets/img/art-inovacao.webp" alt="" width="1060" height="758" loading="lazy">
+                <h3 class="bento__title bento__title--caps">Inovação</h3>
+              </article>
+              <a class="bento__card bento__card--acompanhe" href="https://www.instagram.com/esteticathaistutuy/" target="_blank" rel="noopener" data-reveal>
+                <img class="bento__bg" src="assets/img/art-acompanhe-bg.webp" alt="" width="1400" height="810" loading="lazy">
+                <img class="bento__phone" src="assets/img/art-iphone.webp" alt="Perfil @esteticathaistutuy no Instagram" width="828" height="2305" loading="lazy">
+                <div class="bento__text bento__text--light bento__text--narrow">
+                  <h3 class="bento__title">Acompanhe de Perto</h3>
+                  <p>Faça parte da nossa comunidade. Acompanhe recomendações exclusivas e transformações reais no nosso perfil.</p>
+                </div>
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <!-- ============ 9. CASE ============ -->
+        <section class="section case" id="case" aria-labelledby="case-title">
+          <div class="container">
+            <div class="section-head section-head--split section-head--end">
+              <div>
+                <p class="eyebrow">
+                  <img src="assets/icons/star.svg" alt="" width="42" height="42">
+                  Case de sucesso
+                </p>
+                <h2 class="title" id="case-title" data-split>Uma transformação real: Conheça a história da Paloma Barros</h2>
+              </div>
+              <p class="lead" data-reveal>Sua pele sempre dá sinais do que precisa. O nosso trabalho é interpretar cada um deles. Antes de qualquer procedimento, realizamos um Diagnóstico de Pele aprofundado para entender exatamente o que está causando suas queixas.</p>
+            </div>
+
+            <div class="case__row">
+              <div class="prose prose--lg" data-reveal>
+                <p>Desde os 16 anos de idade, a Paloma passava de estética em estética buscando uma solução para a sua pele, mas se frustrava com a falta de resultados. Para lidar com as marcas e a textura irregular, ela havia se acostumado a <strong>depender de muita maquiagem todos os dias</strong>. Ela não estava apenas escondendo a pele; estava escondendo a própria autoestima.</p>
+                <p>Foi então que ela chegou à clínica e decidiu iniciar o seu tratamento conosco. Em vez de protocolos genéricos, aplicamos um <strong>gerenciamento personalizado para as necessidades reais do rosto dela.</strong> Ao longo do processo, não tratamos apenas a queixa principal, mas devolvemos a saúde, o viço e a barreira de proteção que ela tanto precisava.</p>
+              </div>
+              <figure class="case__photo" data-clip>
+                <img src="assets/img/case-front.webp" alt="Antes e depois da Paloma, vista frontal: pele com acne à esquerda e pele uniforme à direita" width="1700" height="1082" loading="lazy">
+              </figure>
+            </div>
+
+            <div class="case__row case__row--reverse">
+              <figure class="case__photo case__photo--profile" data-clip>
+                <img src="assets/img/case-profile.webp" alt="Antes e depois da Paloma, vista de perfil" width="1700" height="1038" loading="lazy">
+              </figure>
+              <div class="case__result">
+                <div data-reveal>
+                  <h3 class="card-title card-title--xl">O resultado?</h3>
+                  <p class="lead lead--lg">Uma pele completamente transformada. A Paloma finalmente pôde abandonar o excesso de maquiagem e voltar a se sentir bem ao se olhar no espelho.</p>
+                </div>
+                <div data-reveal>
+                  <h3 class="card-title">Como ela mesma resumiu:</h3>
+                  <blockquote class="quote">
+                    <p>“Melhor escolha que fiz foi fechar meu tratamento com ela! Desde os 16 anos de idade passando em estética por estética e nada de resultado, encontrei a melhor profissional do mundo ❤️”</p>
+                  </blockquote>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ============ 10. FAQ ============ -->
+        <section class="section faq" id="duvidas" aria-labelledby="faq-title">
+          <div class="container faq__layout">
+            <figure class="faq__photo" data-clip>
+              <img src="assets/img/faq-portrait.webp" alt="Thais Tutuy sorrindo" width="1660" height="1772" loading="lazy" data-parallax-img>
+            </figure>
+
+            <div class="faq__content">
+              <p class="eyebrow">
+                <img src="assets/icons/star.svg" alt="" width="42" height="42">
+                Dúvidas frequentes
+              </p>
+              <h2 class="title title--xl" id="faq-title" data-split>Dúvidas comuns sobre os nossos tratamentos.</h2>
+
+              <div class="faq__list" data-faq>
+                <div class="faq__item" data-reveal>
+                  <h3 class="faq__heading">
+                    <button class="faq__trigger" type="button" aria-expanded="false" aria-controls="faq-1">
+                      <span class="faq__question">Como funciona o Método Efeito ViraTempo?</span>
+                      <span class="faq__thumb faq__thumb--1" aria-hidden="true">
+                        <img class="faq__thumb-img" src="assets/img/faq-1.webp" alt="" width="500" height="333" loading="lazy">
+                        <img class="faq__arrow" src="assets/icons/faq-arrow.svg" alt="" width="48" height="48">
+                      </span>
+                    </button>
+                  </h3>
+                  <div class="faq__panel" id="faq-1" role="region" aria-label="Como funciona o Método Efeito ViraTempo?">
+                    <p>Tudo começa com um Diagnóstico de Pele aprofundado. A partir dele, montamos um plano 100% personalizado, combinando os tratamentos certos para a sua pele e ajustando cada etapa conforme a evolução. O objetivo é estimular o colágeno e devolver firmeza, viço e luminosidade de forma natural, sem botox e sem agulha.</p>
+                  </div>
+                </div>
+
+                <div class="faq__item" data-reveal>
+                  <h3 class="faq__heading">
+                    <button class="faq__trigger" type="button" aria-expanded="false" aria-controls="faq-2">
+                      <span class="faq__question">Como vou saber qual tratamento é o certo para mim?</span>
+                      <span class="faq__thumb faq__thumb--2" aria-hidden="true">
+                        <img class="faq__thumb-img" src="assets/img/faq-2.webp" alt="" width="640" height="338" loading="lazy">
+                        <img class="faq__arrow" src="assets/icons/faq-arrow.svg" alt="" width="48" height="48">
+                      </span>
+                    </button>
+                  </h3>
+                  <div class="faq__panel" id="faq-2" role="region" aria-label="Como vou saber qual tratamento é o certo para mim?">
+                    <p>Você não precisa escolher sozinha. Na avaliação, analisamos o seu tipo de pele, as suas queixas e a sua rotina. Com isso, indicamos o protocolo mais adequado e explicamos cada passo antes de começar.</p>
+                  </div>
+                </div>
+
+                <div class="faq__item" data-reveal>
+                  <h3 class="faq__heading">
+                    <button class="faq__trigger" type="button" aria-expanded="false" aria-controls="faq-3">
+                      <span class="faq__question">Os procedimentos causam dor ou exigem repouso?</span>
+                      <span class="faq__thumb faq__thumb--3" aria-hidden="true">
+                        <img class="faq__thumb-img" src="assets/img/faq-3.webp" alt="" width="420" height="614" loading="lazy">
+                        <img class="faq__arrow" src="assets/icons/faq-arrow.svg" alt="" width="48" height="48">
+                      </span>
+                    </button>
+                  </h3>
+                  <div class="faq__panel" id="faq-3" role="region" aria-label="Os procedimentos causam dor ou exigem repouso?">
+                    <p>Os tratamentos são pensados para serem confortáveis e, na maioria dos casos, você volta à rotina no mesmo dia. Alguns procedimentos podem deixar a pele levemente avermelhada por algumas horas. Todas as orientações de cuidado são passadas na avaliação.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ============ 11. DEPOIMENTOS ============ -->
+        <section class="section testimonials" id="depoimentos" aria-labelledby="depoimentos-title">
+          <div class="container">
+            <div class="testimonials__head">
+              <div>
+                <p class="eyebrow">
+                  <img src="assets/icons/star.svg" alt="" width="42" height="42">
+                  Prova social
+                </p>
+                <h2 class="title title--xxl" id="depoimentos-title" data-split>O que meus pacientes dizem:</h2>
+              </div>
+              <dl class="stats" data-reveal>
+                <div class="stats__item">
+                  <dt class="stats__label">Pacientes atendidos</dt>
+                  <dd class="stats__value">+<span data-count="100">100</span></dd>
+                </div>
+                <div class="stats__item">
+                  <dt class="stats__label">De satisfação</dt>
+                  <dd class="stats__value"><span data-count="98">98</span>%</dd>
+                </div>
+              </dl>
+            </div>
+
+            <ul class="reviews" role="list">
+              <li class="review" data-reveal>
+                <div class="review__top">
+                  <img class="review__avatar" src="assets/img/avatar.webp" alt="" width="160" height="160" loading="lazy">
+                  <div>
+                    <p class="review__name">Andre Vieira</p>
+                    <p class="review__date">3 meses atrás</p>
+                  </div>
+                  <img class="review__google" src="assets/img/google.webp" alt="Avaliação do Google" width="72" height="72" loading="lazy">
+                </div>
+                <img class="review__stars" src="assets/icons/stars.svg" alt="5 de 5 estrelas" width="148" height="28" loading="lazy">
+                <p class="review__text">Profissional muito qualificada, excelente atendimento muito bom recomendo.</p>
+              </li>
+              <li class="review" data-reveal>
+                <div class="review__top">
+                  <img class="review__avatar" src="assets/img/avatar.webp" alt="" width="160" height="160" loading="lazy">
+                  <div>
+                    <p class="review__name">Andre Vieira</p>
+                    <p class="review__date">3 meses atrás</p>
+                  </div>
+                  <img class="review__google" src="assets/img/google.webp" alt="Avaliação do Google" width="72" height="72" loading="lazy">
+                </div>
+                <img class="review__stars" src="assets/icons/stars.svg" alt="5 de 5 estrelas" width="148" height="28" loading="lazy">
+                <p class="review__text">Profissional muito qualificada, excelente atendimento muito bom recomendo.</p>
+              </li>
+              <li class="review" data-reveal>
+                <div class="review__top">
+                  <img class="review__avatar" src="assets/img/avatar.webp" alt="" width="160" height="160" loading="lazy">
+                  <div>
+                    <p class="review__name">Andre Vieira</p>
+                    <p class="review__date">3 meses atrás</p>
+                  </div>
+                  <img class="review__google" src="assets/img/google.webp" alt="Avaliação do Google" width="72" height="72" loading="lazy">
+                </div>
+                <img class="review__stars" src="assets/icons/stars.svg" alt="5 de 5 estrelas" width="148" height="28" loading="lazy">
+                <p class="review__text">Profissional muito qualificada, excelente atendimento muito bom recomendo.</p>
+              </li>
+            </ul>
+          </div>
+        </section>
+      </main>
+
+      <!-- ============ 12. RODAPÉ ============ -->
+      <footer class="site-footer" id="contato">
+        <div class="site-footer__inner">
+          <div class="site-footer__card">
+            <div class="footer-media" data-reveal>
+              <div class="footer-media__image">
+                <img src="assets/img/footer-image.webp" alt="Aplicação de sérum com conta-gotas na testa de uma paciente" width="2300" height="1356" loading="lazy">
+              </div>
+              <div class="footer-media__tag">
+                <h2 class="footer-media__title">Sua clínica de estética em Alphaville</h2>
+                <p>Estamos em Alphaville oferecendo tratamentos faciais personalizados para quem busca rejuvenescer, tratar a acne e recuperar o viço da pele com naturalidade, segurança e sem agulha.</p>
+              </div>
+            </div>
+
+            <div class="footer-aside">
+              <div class="footer-aside__top">
+                <nav aria-label="Rodapé">
+                  <h3 class="footer-aside__heading">Serviços</h3>
+                  <ul class="footer-aside__links">
+                    <li><a href="#inicio">Início</a></li>
+                    <li><a href="#sobre">Quem sou</a></li>
+                    <li><a href="#tratamentos">Tratamentos</a></li>
+                    <li><a href="#duvidas">Dúvidas</a></li>
+                  </ul>
+                </nav>
+                <div class="footer-aside__social">
+                  <h3 class="footer-aside__heading">Contato</h3>
+                  <div class="footer-aside__icons">
+                    <a href="https://wa.me/5511982995652" target="_blank" rel="noopener" aria-label="WhatsApp">
+                      <img src="assets/icons/social-whatsapp.svg" alt="" width="59" height="59" loading="lazy">
+                    </a>
+                    <a href="https://www.instagram.com/esteticathaistutuy/" target="_blank" rel="noopener" aria-label="Instagram">
+                      <img src="assets/icons/social-instagram.svg" alt="" width="59" height="59" loading="lazy">
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <a class="btn btn--outline" href="https://wa.me/5511982995652?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o." target="_blank" rel="noopener">Agendar uma avaliação</a>
+
+              <ul class="footer-aside__contact">
+                <li>
+                  <img src="assets/icons/icon-phone.svg" alt="" width="24" height="24" loading="lazy">
+                  <a href="tel:+5511982995652">(11) 98299-5652</a>
+                </li>
+                <li>
+                  <img src="assets/icons/icon-mail.svg" alt="" width="24" height="24" loading="lazy">
+                  <a href="mailto:email@layana.com">email@layana.com</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="site-footer__bottom">
+            <p>Copyright © <span data-year>2026</span> – Thais Tutuy. Todos os direitos reservados.</p>
+            <p>Desenvolvido por NeoShift</p>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+</body>
+</html>
