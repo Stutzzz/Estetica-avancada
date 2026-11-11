@@ -49,7 +49,8 @@
     smoothTouch: 0.1,
   });
 
-  heroIntro();
+  // O preloader roda primeiro; a entrada do hero começa quando ele sai
+  preloader(heroIntro);
   heroScroll();
   splitTitles();
   reveals();
@@ -216,6 +217,52 @@
         setOpen(btn, !isOpen);
       });
     });
+  }
+
+  /* --------------------------- Preloader ------------------------------- */
+  /* Desenha o contorno da estrela, preenche com o degradê e sobe como cortina */
+  function preloader(onDone) {
+    const el = $('#preloader');
+    if (!el) { onDone(); return; }
+
+    const star = $('.preloader__star', el);
+    const stroke = $('.preloader__stroke', el);
+    const fill = $('.preloader__fill', el);
+    const length = stroke.getTotalLength();
+
+    gsap.set(el, { animation: 'none' }); // desliga o "sumir sozinho" do CSS
+    gsap.set(stroke, { strokeDasharray: length, strokeDashoffset: length });
+    state.smoother.paused(true);
+
+    let started = false;
+    const start = () => {
+      if (started) return;
+      started = true;
+      state.smoother.paused(false);
+      (document.fonts ? document.fonts.ready : Promise.resolve()).then(onDone);
+    };
+
+    gsap.timeline({ delay: 0.2 })
+      .fromTo(star, { scale: 0.8, rotate: -45 }, { scale: 1, rotate: 0, duration: 1.8, ease: 'power3.out' }, 0)
+      .to(stroke, { strokeDashoffset: 0, duration: 1.4, ease: 'power2.inOut' }, 0)
+      .to(fill, { opacity: 1, duration: 0.7, ease: 'power1.out' }, '-=0.3')
+      .to(stroke, { opacity: 0, duration: 0.4 }, '<0.3')
+      .to(star, { scale: 1.12, duration: 0.5, ease: 'power2.inOut' }, '-=0.1')
+      .to(el, {
+        clipPath: 'inset(0% 0% 100% 0%)',
+        duration: 1,
+        ease: 'expo.inOut',
+        onStart: () => gsap.delayedCall(0.25, start),
+        onComplete: () => el.remove(),
+      }, '-=0.15')
+      .to(star, { yPercent: -60, autoAlpha: 0, duration: 0.6, ease: 'power2.in' }, '<');
+
+    // Garantia: se algo travar, a página aparece mesmo assim
+    setTimeout(() => {
+      if (started) return;
+      el.remove();
+      start();
+    }, 6000);
   }
 
   /* ---------------------------- Hero ----------------------------------- */

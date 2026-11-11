@@ -55,6 +55,20 @@
   </script>
 </head>
 <body>
+  <!-- ============ PRELOADER: contorno da estrela sendo desenhado e depois preenchido ============ -->
+  <div class="preloader" id="preloader" aria-hidden="true">
+    <svg class="preloader__star" viewBox="-2 -2 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="preloader-grad" x1="21" y1="0" x2="21" y2="42" gradientUnits="userSpaceOnUse">
+          <stop stop-color="#A4133C"/>
+          <stop offset="1" stop-color="#3E0717"/>
+        </linearGradient>
+      </defs>
+      <path class="preloader__fill" d="M21.3731 0L23.6048 16.5267L31.508 9.99042L25.3247 18.2124L42 20.7282L25.1105 23.1676L31.5437 31.6223L23.6346 25.2602L21.5338 41.1984L21.4803 42L19.1474 25.2602L11.756 31.0308L17.2668 23.1064L0 20.573L17.2311 18.0163L11.756 9.99042L19.1474 16.5267L21.3731 0Z" fill="url(#preloader-grad)"/>
+      <path class="preloader__stroke" d="M21.3731 0L23.6048 16.5267L31.508 9.99042L25.3247 18.2124L42 20.7282L25.1105 23.1676L31.5437 31.6223L23.6346 25.2602L21.5338 41.1984L21.4803 42L19.1474 25.2602L11.756 31.0308L17.2668 23.1064L0 20.573L17.2311 18.0163L11.756 9.99042L19.1474 16.5267L21.3731 0Z"/>
+    </svg>
+  </div>
+
   <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
 
   <!-- Ícones reutilizáveis -->

@@ -118,6 +118,7 @@ Princípios: suave, lento, "spa". Nada que pisque. Duração base `1s`, easing `
 
 | Onde | Efeito | Ferramenta |
 |---|---|---|
+| Preloader | Contorno da estrela (favicon) é desenhado, preenche com o degradê do hero e a tela sobe como cortina (~3,5s); página não rola enquanto isso | `strokeDashoffset` + clip-path |
 | Página toda | Scroll suave (`smooth: 1.2`, `effects: true`) | ScrollSmoother |
 | Hero (entrada) | Card escala de 0.94 → 1; título sobe linha a linha (máscara); subtítulo, CTAs e endereço em fade-up; foto com zoom-out | Timeline + SplitText |
 | Hero (scroll) | Foto em parallax, assinatura "Thais Tutuy" desliza na horizontal | `data-speed` / scrub |
