@@ -288,7 +288,11 @@
     const st = { trigger: '.hero', start: 'top top', end: 'bottom top', scrub: true };
     gsap.to('.hero__photo-wrap', { yPercent: 12, ease: 'none', scrollTrigger: st });
     gsap.to('[data-hero-signature]', { xPercent: -14, ease: 'none', scrollTrigger: { ...st } });
-    gsap.to('.hero__content', { yPercent: -8, autoAlpha: 0.35, ease: 'none', scrollTrigger: { ...st, start: 'center center' } });
+    // Valores iniciais explícitos: este efeito é criado enquanto o hero ainda está
+    // escondido pelo preloader, então não pode "ler" o estado atual do texto.
+    gsap.fromTo('.hero__content',
+      { yPercent: 0, opacity: 1 },
+      { yPercent: -8, opacity: 0.35, ease: 'none', immediateRender: false, scrollTrigger: { ...st, start: 'center center' } });
   }
 
   /* ----------------------- Títulos linha a linha ----------------------- */
