@@ -1,9 +1,9 @@
-# Estética Thais Tutuy — Landing page
+# Oreall Estética — Landing page (portfólio)
 
 Site estático (HTML + CSS + JavaScript) com animações em **GSAP 3**
 (ScrollTrigger, ScrollSmoother e SplitText). Sem build, sem dependências locais.
 
-Design e decisões: [`design.md`](design.md) · Figma: [thaistutuy](https://www.figma.com/design/YH6f6uJkNEH3RvhvjOEM2N/thaistutuy?node-id=151-2)
+Design e decisões: [`design.md`](design.md) · Figma: Frame 316 (Figma do projeto)
 
 ## Estrutura
 
@@ -50,9 +50,7 @@ Depois abra http://localhost:5173.
 
 ## Antes de publicar
 
-- [ ] Trocar o e-mail `email@layana.com` no rodapé.
 - [ ] Trocar os 3 depoimentos (hoje são iguais) por avaliações reais.
 - [ ] Revisar as respostas do FAQ.
-- [ ] Confirmar o Instagram `@esteticathaistutuy`.
 - [ ] Depois de ter o domínio, adicionar `<link rel="canonical">` e a URL completa em `og:image`.
 - [ ] Fontes: ver a nota de licença em `design.md` (Logam / Karatone).

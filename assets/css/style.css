@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Estética Thais Tutuy — estilos
+   Oreall Estética — estilos
    Referência: design.md (tokens, seções e regras de movimento)
    Índice:
    1. Tokens        2. Base           3. Utilitários     4. Componentes
@@ -336,7 +336,7 @@ button { font: inherit; color: inherit; }
   margin-right: auto;
   transition: opacity 0.4s var(--ease-out), visibility 0.4s;
 }
-.site-header__logo img { width: clamp(112px, 9.4vw, 180px); }
+.site-header__logo img { width: clamp(110px, 8.8vw, 170px); }
 .site-header.is-scrolled .site-header__logo { opacity: 0; visibility: hidden; }
 
 .site-nav__list {
@@ -498,17 +498,13 @@ button { font: inherit; color: inherit; }
 }
 .hero__address img { flex: none; width: clamp(44px, 2.8vw, 54px); }
 
+/* Assinatura da marca (vetor do Figma): encostada à direita, cortada na base do card */
 .hero__signature {
   position: absolute;
-  right: 0.8%;
-  bottom: -0.42em;
-  font-family: var(--font-display);
-  font-weight: 350;
-  font-size: var(--fs-signature);
-  font-variation-settings: "opsz" 144, "SOFT" 100, "WONK" 0;
-  line-height: 1;
-  color: var(--c-bg);
-  white-space: nowrap;
+  right: 0;
+  bottom: -4.2%;
+  width: 31%;
+  max-width: none;
   pointer-events: none;
   user-select: none;
 }
@@ -636,7 +632,7 @@ button { font: inherit; color: inherit; }
   bottom: 4%;
   width: auto;
   height: min(64%, calc(100% - 150px));
-  filter: drop-shadow(0 18px 18px rgba(0, 0, 0, 0.18));
+  mix-blend-mode: multiply; /* a foto tem fundo branco: some contra o fundo do card */
 }
 
 .method__benefits {
@@ -827,17 +823,11 @@ button { font: inherit; color: inherit; }
 
 .ebook__visual {
   position: relative;
-  isolation: isolate;
   flex: 0 0 min(780px, 45%);
+  background: var(--c-bg); /* base para o "multiply" do mockup */
 }
-.ebook__shadow {
-  position: absolute;
-  z-index: -1;
-  left: 4.1%;
-  top: 91%;
-  width: 96.7%;
-  max-width: none;
-}
+/* O mockup tem fundo branco: com multiply ele some contra o fundo da página */
+.ebook__mockup { width: 100%; mix-blend-mode: multiply; }
 
 /* 13. A arte de renovar --------------------------------------------------- */
 .art { margin-top: clamp(96px, 13vw, 250px); }
@@ -939,19 +929,9 @@ button { font: inherit; color: inherit; }
 .bento__title--caps { text-transform: uppercase; line-height: 1.4; color: var(--c-white-80); }
 
 .bento__card--acompanhe { grid-column: span 2; justify-content: center; padding: 32px 24px; }
-.bento__card--acompanhe .bento__bg { object-position: left center; }
-.bento__card--acompanhe::after { background: rgba(0, 0, 0, 0.5); }
+.bento__card--acompanhe .bento__bg { object-position: right center; }
+.bento__card--acompanhe::after { background: linear-gradient(90deg, rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.1) 65%); }
 .bento__card--acompanhe .bento__text { color: var(--c-white-80); }
-.bento__phone {
-  position: absolute;
-  z-index: -1;
-  left: 52.56%;
-  top: 16.75%;
-  width: 78.56%;
-  max-width: none;
-  transition: transform 0.8s var(--ease-out);
-}
-.bento__card--acompanhe:hover .bento__phone { transform: translateY(-12px); }
 
 /* 14. Case ----------------------------------------------------------------- */
 .case .section-head--split > :first-child { flex-basis: 792px; }
@@ -1280,7 +1260,6 @@ button { font: inherit; color: inherit; }
   .bento__text--narrow p { font-size: var(--fs-sm); }
   .bento__text--narrow { max-width: 56%; }
   .bento__text--narrow .bento__title { font-size: clamp(1.5rem, 0.8rem + 1.2vw, 2.625rem); }
-  .bento__phone { left: 60%; }
 }
 
 /* ≤ 1439px — notebooks */
@@ -1376,7 +1355,7 @@ button { font: inherit; color: inherit; }
     margin-top: -24px;
   }
   .hero__address { position: relative; left: auto; bottom: auto; margin: 32px 20px 0; }
-  .hero__address + .hero__signature { bottom: -0.38em; }
+  .hero__address + .hero__signature { bottom: -4%; width: 72%; }
   .hero__photo-wrap { order: 3; margin-top: auto; }
   .hero__signature { z-index: 1; }
 }

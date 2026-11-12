@@ -1,7 +1,7 @@
-# Design — Estética Thais Tutuy
+# Design — Oreall Estética
 
-Landing page da **Estética Thais Tutuy** (Alphaville, Barueri), feita a partir do Figma
-[`thaistutuy` › Frame 315](https://www.figma.com/design/YH6f6uJkNEH3RvhvjOEM2N/thaistutuy?node-id=151-2).
+Landing page da **Oreall Estética** — marca fictícia, projeto de portfólio da Stutz-Web — feita a partir do Figma
+Frame 316 (Figma do projeto).
 
 Stack: HTML + CSS + JavaScript puro, GSAP 3 (ScrollTrigger, ScrollSmoother, SplitText) via CDN.
 Sem build. Hospedagem estática na Vercel.
@@ -96,16 +96,16 @@ Logam usa versaletes nas minúsculas — por isso os títulos parecem "caixa alt
 
 | # | Seção | `id` | Conteúdo |
 |---|---|---|---|
-| 0 | Header | — | Logo, pílula de navegação (Início, Sobre, Tratamentos, Vira Tempo), botão "Entrar em contato" |
-| 1 | Hero | `inicio` | Card vinho com foto (rolinho facial), eyebrow "Estética avançada em Alphaville", H1 "Sua pele mais jovem sem agulha!", subtítulo, CTAs, endereço, assinatura "Thais Tutuy" |
+| 0 | Header | — | Logo, pílula de navegação (Início, Sobre, Tratamentos, Lumière), botão "Entrar em contato" |
+| 1 | Hero | `inicio` | Card vinho com foto (rolinho facial), eyebrow "Estética avançada em Alphaville", H1 "Sua pele mais jovem sem agulha!", subtítulo, CTAs, endereço, assinatura "Oreall®" |
 | 2 | Momentos | `momentos` | Título + texto; 3 cards (Sinais do tempo, Acne e Oleosidade, Textura e Poros) — a cabeça da modelo "sai" do card |
-| 3 | Método | `metodo` | Painel "Método Vira Tempo": card grande com foto + texto, card "Sem botox!" com frasco, 4 mini-cards com ícone |
+| 3 | Método | `metodo` | Painel "Método Lumière": card grande com foto + texto, card "Sem botox!" com frasco, 4 mini-cards com ícone |
 | 4 | Tratamentos | `tratamentos` | Coluna esquerda fixa (título, texto, CTA) + 6 cards empilhados (Limpeza, Peeling, Microagulhamento, Lifting, Spa, Lábios de Seda) |
-| 5 | Sobre | `sobre` | Texto da Thais + retrato grande |
+| 5 | Sobre | `sobre` | Texto da especialista (Helena Moraes, fictícia) + retrato grande |
 | 6 | Galeria | — | Faixa de 6 fotos P&B, largura total |
 | 7 | E-book | `vira-tempo` | Texto + card "Bônus exclusivo" + CTA; mockup do livro e celular |
 | 8 | A arte de renovar | `arte` | Título gigante com 2 fotos circulares; bento com 4 cards |
-| 9 | Case | `case` | História da Paloma Barros, 2 fotos antes/depois, resultado e citação |
+| 9 | Case | `case` | História da Juliana Reis (fictícia), 2 fotos antes/depois, resultado e citação |
 | 10 | FAQ | `duvidas` | Retrato + 3 perguntas (acordeão) |
 | 11 | Depoimentos | `depoimentos` | Título, stats (+100 / 98%), 3 cards Google |
 | 12 | Rodapé | `contato` | Foto com recorte, links, redes, CTA, telefone, e-mail, copyright |
@@ -121,7 +121,7 @@ Princípios: suave, lento, "spa". Nada que pisque. Duração base `1s`, easing `
 | Preloader | Contorno da estrela (favicon) é desenhado, preenche com o degradê do hero e a tela sobe como cortina (~3,5s); página não rola enquanto isso | `strokeDashoffset` + clip-path |
 | Página toda | Scroll suave (`smooth: 1.2`, `effects: true`) | ScrollSmoother |
 | Hero (entrada) | Card escala de 0.94 → 1; título sobe linha a linha (máscara); subtítulo, CTAs e endereço em fade-up; foto com zoom-out | Timeline + SplitText |
-| Hero (scroll) | Foto em parallax, assinatura "Thais Tutuy" desliza na horizontal | `data-speed` / scrub |
+| Hero (scroll) | Foto em parallax, assinatura "Oreall®" desliza na horizontal | `data-speed` / scrub |
 | Títulos de seção | Linhas sobem de dentro de uma máscara ao entrar na tela | SplitText + ScrollTrigger |
 | Cards (momentos, método, depoimentos) | Fade-up em cascata (`stagger: .12`) | ScrollTrigger.batch |
 | Momentos | A modelo sobe levemente acima do card (parallax) | scrub |
@@ -170,7 +170,7 @@ Gutter mínimo 16px, sem rolagem horizontal.
 
 ## 7. Conteúdo a revisar antes de publicar
 
-- Rodapé no Figma diz *"Sua clínica de fisioterapia no Morumbi"* e e-mail `email@layana.com` (texto de outro projeto). No site foi adaptado para estética em Alphaville; o e-mail continua como placeholder.
 - Os 3 depoimentos são iguais (*Andre Vieira*) — trocar por avaliações reais do Google.
 - Respostas do FAQ não existem no Figma — foram escritas como rascunho.
-- Link do Instagram (`@esteticathaistutuy`) foi deduzido do mockup do celular.
+- Instagram `@oreall.estetica` é fictício.
+- Fotos de pessoas e produtos foram geradas por IA (arquivo Figma "Oreall — imagens do site"); nenhuma é de cliente real.

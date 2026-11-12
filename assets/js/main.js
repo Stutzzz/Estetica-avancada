@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Estética Thais Tutuy — interações e animações
+   Oreall Estética — interações e animações
    GSAP 3 + ScrollTrigger + ScrollSmoother + SplitText (carregados via CDN)
    Regras de movimento: design.md › seção 4
    ========================================================================== */
@@ -407,7 +407,6 @@
   function ebook() {
     const st = { trigger: '[data-ebook]', start: 'top bottom', end: 'bottom top', scrub: true };
     gsap.fromTo('[data-ebook-mockup]', { yPercent: 8, rotate: -2 }, { yPercent: -6, rotate: 1, ease: 'none', scrollTrigger: st });
-    gsap.fromTo('.ebook__shadow', { scaleX: 1 }, { scaleX: 0.82, autoAlpha: 0.6, ease: 'none', scrollTrigger: { ...st } });
   }
 
   function art() {
